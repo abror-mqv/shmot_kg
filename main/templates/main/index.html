@@ -1,0 +1,48 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h2>{{id}}</h2>
+<br />
+<div class="subsubcats">
+    {% for subsubcat in subsubcats %}
+    <a href="/cat/{{subsubcat.id}}">
+        <h4>{{subsubcat.subsubcat_name}}</h4>
+    </a>
+    {% endfor %}
+</div>
+<div class="hero">
+    {% for product in products %}
+    <div class="product_card">
+        <div>
+            <img src="{{ product.image.url }}" alt="изображение товара {{ product.product_name }}">
+        </div>
+        <div class="catBlock__main">
+            <h3>{{ product.product_name }}</h3>
+            <p>{{ product.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+    {% for product in products %}
+    <div class="product_card">
+        <div>
+            <img src="{{ product.image.url }}" alt="изображение товара {{ product.product_name }}">
+        </div>
+        <div class="catBlock__main">
+            <h3>{{ product.product_name }}</h3>
+            <p>{{ product.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+    {% for product in products %}
+    <div class="product_card">
+        <div>
+            <img src="{{ product.image.url }}" alt="изображение товара {{ product.product_name }}">
+        </div>
+        <div class="catBlock__main">
+            <h3>{{ product.product_name }}</h3>
+            <p>{{ product.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

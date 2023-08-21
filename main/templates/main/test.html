@@ -1,0 +1,17 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h2>{{id}}</h2>
+<br />
+{% for product in products %}
+<div>
+    <div>
+        <img src="{{ product.image.url }}" alt="изображение товара {{ product.product_name }}">
+    </div>
+    <div class="catBlock__main">
+        <h3>{{ product.product_name }}</h3>
+        <p>{{ product.description}}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
