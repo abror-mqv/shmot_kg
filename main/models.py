@@ -120,4 +120,3 @@ class Market(models.Model):
     def __str__(self):
         return f"Рынок: {self.name}"
     
-class 
