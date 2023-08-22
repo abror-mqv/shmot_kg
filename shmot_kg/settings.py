@@ -3,7 +3,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-utdaokkb9r(1x#hqa7l=4vwuw*888f=s6)o9-ims=aiz7n$y)9'
 DEBUG = True
-ALLOWED_HOSTS = ['5.8.11.254','819f-212-112-100-242.ngrok-free.app','0632-46-251-195-48.ngrok-free.app', '1f32-46-251-221-50.ngrok-free.app', 'd370-212-112-100-242.ngrok-free.app', 'c5f1-212-112-100-242.ngrok-free.app',
+ALLOWED_HOSTS = ['8459-5-8-11-254.ngrok-free.app','5.8.11.254','819f-212-112-100-242.ngrok-free.app','0632-46-251-195-48.ngrok-free.app', '1f32-46-251-221-50.ngrok-free.app', 'd370-212-112-100-242.ngrok-free.app', 'c5f1-212-112-100-242.ngrok-free.app',
                  'abaa-212-112-100-242.ngrok-free.app', '20c9-212-112-100-242.ngrok-free.app', '4977-212-112-100-242.ngrok-free.app', '127.0.0.1:8000', '127.0.0.1', '127.0.0.1:3000', 'a204-212-112-100-242.ngrok-free.app']
 INSTALLED_APPS = [
     'django.contrib.admin',
