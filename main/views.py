@@ -87,7 +87,9 @@ class AddCustomerView(APIView):
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
-def index(request, id):
-    user = request.data.user
-    user_cart = CartItem.objects.filter(user=user)
-    return render(request, 'main/index.html', {'products': products_to_show, 'subsubcats': other_subsubcats_to_be_shown})
+
+
+def GetCustomerId(request, id):
+    user_tgid = request.data.tgid
+    user_id = Customer.objects.find(telegram_id = user_tgid)
+    return Response("Index", user_id)
