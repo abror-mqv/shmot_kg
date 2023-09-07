@@ -79,7 +79,7 @@ class AddCartItemView(APIView):
 
 
 class AddCustomerView(APIView):
-    def post(self, request, format=None):
+    def post(self, request, format=None):   
         serializer = CustomerSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -96,6 +96,6 @@ class AddCustomerView(APIView):
 
 class GetCustomerId(generics.ListAPIView):
     def get(request, self, *args, **kwargs):
-            user_tgid = kwargs["id"]
-            user_id = Customer.objects.find(telegram_id = user_tgid)
-            return Response("Index", user_id)
+        user_tgid = kwargs["id"]
+        user_id = Customer.objects.find(telegram_id = user_tgid)
+        return Response("Index", user_id)
