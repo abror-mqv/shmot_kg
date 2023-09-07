@@ -89,7 +89,7 @@ class AddCustomerView(APIView):
 
 
 
-def GetCustomerId(request, id):
-    user_tgid = request.data.tgid
+def GetCustomerId(request, self, *args, **kwargs):
+    user_tgid = kwargs["id"]
     user_id = Customer.objects.find(telegram_id = user_tgid)
     return Response("Index", user_id)
