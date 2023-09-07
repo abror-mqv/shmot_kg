@@ -93,5 +93,5 @@ class AddCustomerView(APIView):
 def GetCustomerId(request, *args, **kwargs):
     user_tgid = kwargs["id"]
     user_id = Customer.objects.get(id=1)
-    return JsonResponse({"id": str(user_id)})
+    return JsonResponse({"id": str(user_id['id'])})
 
