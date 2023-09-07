@@ -92,9 +92,9 @@ class AddCustomerView(APIView):
 # def GetCustomerId(request, self, *args, **kwargs):
 #     user_tgid = kwargs["id"]
 #     user_id = Customer.objects.find(telegram_id = user_tgid)
-#     return Response("Index", user_id)
+#     return Response("Index", user_id)32r32
 
-class GetCustomerId(generics.ListAPIView):
+class GetCustomerId(APIView):
     def get(request, self, *args, **kwargs):
         user_tgid = kwargs["id"]
         user_id = Customer.objects.find(telegram_id = user_tgid)
