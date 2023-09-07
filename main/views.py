@@ -93,5 +93,5 @@ class AddCustomerView(APIView):
 def GetCustomerId(request, *args, **kwargs):
     user_tgid = kwargs["id"]
     # user_id = Customer.objects.find(telegram_id = user_tgid)
-    return JsonResponse({"fruit": "apple"})
+    return JsonResponse({"id": user_tgid})
 
