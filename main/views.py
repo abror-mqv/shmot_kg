@@ -1,4 +1,5 @@
 import json
+from django.forms import JSONField
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.core.serializers import serialize
@@ -92,6 +93,6 @@ class AddCustomerView(APIView):
 
 def GetCustomerId(request, *args, **kwargs):
     user_tgid = kwargs["id"]
-    user_id = Customer.objects.get(id=1)
-    return JsonResponse({"id": str(user_id['id'])})
+    user_id = Customer.objects.filter(telegram_id=user_tgid ).values()
+    return JsonResponse({"id": list(user_id)})
 
