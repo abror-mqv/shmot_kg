@@ -59,11 +59,11 @@ class PodcatApiView(generics.ListAPIView):
         return Response({"products": list(pl)})
 
 
-def view_cart(request):
-    user = request.user
-    cart_items = CartItem.objects.filter(user=1)
-    context = {'cart_items': cart_items}
-    return Response({"via": context})
+# def view_cart(request):
+#     user = request.user
+#     cart_items = CartItem.objects.filter(user=1)
+#     context = {'cart_items': cart_items}
+#     return Response({"via": context})
 
 class AddCartItemView(APIView):
     def post(self, request, format=None):
@@ -95,7 +95,7 @@ def GetCustomerId(request, *args, **kwargs):
     user_id = Customer.objects.filter(telegram_id=user_tgid ).values()
     return JsonResponse({"id": list(user_id)[0]["id"]})
 
-def ViewCart(request, *args, **kwargs):
+def view_cart(request, *args, **kwargs):
     user_tgid = kwargs["id"]
     user_id = Customer.objects.filter(telegram_id=user_tgid ).values()
     cart_items = CartItem.objects.filter(user=list(user_id)[0]["id"])
