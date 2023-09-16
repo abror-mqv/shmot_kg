@@ -99,4 +99,4 @@ def view_cart(request, *args, **kwargs):
     user_tgid = kwargs["id"]
     user_id = Customer.objects.filter(telegram_id=user_tgid ).values()
     cart_items = CartItem.objects.filter(user=list(user_id)[0]["id"])
-    return JsonResponse({"id": list(user_id)})
+    return JsonResponse({"id": list(cart_items)})
