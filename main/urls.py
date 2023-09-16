@@ -9,6 +9,6 @@ urlpatterns = [
     path('api/subcat/<int:idiot>', SubcatApiView.as_view()),
     path('api/add-cart-item/', AddCartItemView.as_view(), name='add-cart-item'),
     path('api/add-customer/', AddCustomerView.as_view(), name='add-customer'),
-    path('api/viewcart/', view_cart),
+    path('api/viewcart/<int:id>', view_cart),
     path('api/getid/<int:id>', GetCustomerId)
 ]
